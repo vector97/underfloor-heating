@@ -5,7 +5,7 @@ $default-font: 'Inter', sans-serif;
 $default-size: 16px;
 
 /* указать высоту строки под проект */
-$default-height: 24px;
+$default-height: 1.5;
 
 /* указать насыщенность шрифта под проект */
 $default-weight: 400;
@@ -17,12 +17,10 @@ $default-color: #232020;
 $default-background: #ffffff;
 
 /* альтернативные цвета */
-$secondary-color: #6D5BD0;
-$white-color: #FFFFFF;
-$black-color: #25213B;
-$field-color: #F4F2FF;
-$field-disabled-color: #cdccd1;
-$separator-color: #C6C2DE;
+$gray-text-color: #898989;
+$gray-bg-color: #f8f8f8;
+$yellow-color: #ffc700;
+$disabled-color: #e0e0e0;
 
 /* указать ширину контейнера
 Пример контейнера

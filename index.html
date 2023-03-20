@@ -15,23 +15,122 @@
   <link rel="icon" href="favicon.svg">
 </head>
 
-<body class="page">
+<body>
 
-  <header class="page__header header">
+  <header class="header">
+    <h1 class="visually-hidden">Тёплый пол в каждый дом</h1>
+
     <div class="container">
       <img class="header__logo" src="./img/logo.svg" alt="Логотип компании Теплый пол">
 
-      <button class="header__button">Заказать</button>
+      <button class="header__button button">Заказать</button>
     </div>
   </header>
   <!-- /.header -->
 
-  <main class="page__main main">
-    <div class="container"></div>
-  </main>
-  <!-- /.main -->
+  <main>
+    <section class="hero section-offset">
+      <div class="container hero__container">
+        <div class="hero__content gray-block">
+          <h2 class="section-title hero__title">Приносим тепло в&nbsp;каждый дом</h2>
+          <p class="hero__description">Устанавливаем теплые полы в&nbsp;квартирах, офисах и&nbsp;загородных домах.</p>
+          <a class="hero__button button" href="#calc">Рассчитать&nbsp;стоимость</a>
+        </div>
+        <!-- /.hero__content -->
 
-  <footer class="page__footer footer">
+        <div class="hero__slider-block">
+          <div class="filling hero__slider">
+            <div class="filling hero__slider-wrapper">
+              <div class="filling hero__slide" style="background-image: url('./img/hero-slider/hero-slider-01.jpg');">
+              </div>
+            </div>
+
+            <div class="hero__slider-navigation">
+              <button class="button hero__slider-btn hero__slider-btn_prev"></button>
+              <button class="button hero__slider-btn hero__slider-btn_next"></button>
+            </div>
+          </div>
+        </div>
+        <!-- /.hero__slider-wrapper -->
+      </div>
+    </section>
+    <!-- /.hero -->
+
+    <section class="advantages section-offset">
+      <div class="container advantages__container">
+        <h2 class="section-title advantages__title">Наши преимущества</h2>
+
+        <ul class="advantages__list">
+          <li class="advantages__item">Надежные материалы</li>
+          <li class="advantages__item">опытные монтажники</li>
+          <li class="advantages__item">Регулируемая температура пола</li>
+          <li class="advantages__item">Защита от замыканий</li>
+          <li class="advantages__item">Гарантия до 10 лет</li>
+        </ul>
+      </div>
+    </section>
+    <!-- /.advantages -->
+
+    <section class="calc section-offset" id="calc">
+      <div class="container calc__container">
+        <div class="calc__content gray-block">
+          <h2 class="section-title calc__title">Рассчитайте стоимость</h2>
+
+          <form class="calc__form">
+            <fieldset class="calc__fieldset calc__fieldset_size">
+              <label class="calc__input-label_size">
+                <span class="calc__label">Ширина помещения, м</span>
+                <input class="calc__input" type="number" name="width" value="5" required>
+              </label>
+
+              <label class="calc__input-label_size">
+                <span class="calc__label">Длина помещения, м</span>
+                <input class="calc__input" type="number" name="length" value="7" required>
+              </label>
+            </fieldset>
+
+            <fieldset class="calc__fieldset calc__fieldset_tariff">
+              <legend class="calc__label calc__label_legend">Тариф</legend>
+
+              <label class="calc__input-label_tariff">
+                <input class="calc__radio" type="radio" name="tariff" value="economy">
+                <span>Эконом</span>
+              </label>
+
+              <label class="calc__input-label_tariff">
+                <input class="calc__radio" type="radio" name="tariff" value="comfort" checked>
+                <span>Комфорт</span>
+              </label>
+
+              <label class="calc__input-label_tariff">
+                <input class="calc__radio" type="radio" name="tariff" value="premium">
+                <span>Премиум</span>
+              </label>
+            </fieldset>
+
+            <button class="button calc__submit" type="submit">Рассчитать</button>
+          </form>
+          <!-- /.calc__form -->
+        </div>
+        <!-- /.calc__content -->
+
+        <div class="calc__total">
+          <dl class="calc__result-wrapper">
+            <dt class="calc__label calc__label_total">Площадь</dt>
+            <dd class="calc__result-value">35 кв м</dd>
+
+            <dt class="calc__label calc__label_total">Примерная стоимость</dt>
+            <dd class="calc__result-value">42590 руб</dd>
+          </dl>
+        </div>
+        <!-- /.calc__total -->
+      </div>
+    </section>
+    <!-- /.calc -->
+  </main>
+  <!-- /main -->
+
+  <footer class="footer">
     <div class="container">
       <img class="footer__logo" src="./img/logo.svg" alt="Логотип компании Теплый пол">
 

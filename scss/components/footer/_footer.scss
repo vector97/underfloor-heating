@@ -1,5 +1,5 @@
 .footer {
-  margin-bottom: 40px;
+padding-bottom: 40px;
 
   .container {
     display: grid;
@@ -11,7 +11,7 @@
 
     padding-top: 50px;
 
-    border-top: 2px solid #f8f8f8;
+    border-top: 2px solid $gray-bg-color;
   }
 
   &__logo {
@@ -33,8 +33,8 @@
 
     margin-top: 8px;
 
-    .contacts__item + .contacts__item {
-      margin-top: 16px;
+    &__item:not(:last-child) {
+      margin-bottom: 16px;
     }
 
     &__link {
@@ -51,8 +51,8 @@
   .developers {
     grid-area: developers;
 
-    .developers__item + .developers__item {
-      margin-top: 8px;
+    &__item:not(:last-child) {
+      margin-bottom: 8px;
     }
   }
 }
