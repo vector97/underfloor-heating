@@ -1,7 +1,7 @@
 .footer {
 padding-bottom: 40px;
 
-  .container {
+  &__container {
     display: grid;
     gap: 40px 126px;
     grid-template-columns: max-content auto max-content;
@@ -26,6 +26,10 @@ padding-bottom: 40px;
     gap: 24px;
 
     margin-top: 8px;
+
+    svg {
+      display: block;
+    }
   }
 
   .contacts {

@@ -6,11 +6,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- swiperjs -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
+
   <!-- Подключение главного файла со стилями -->
   <link rel="stylesheet" href="./css/index.css">
 
   <!-- Подключение главного файла со скриптами -->
-  <script src="./js/index.js" type="module"></script>
+  <script src="./js/index.js" defer></script>
 
   <link rel="icon" href="favicon.svg">
 </head>
@@ -21,7 +25,7 @@
     <h1 class="visually-hidden">Тёплый пол в каждый дом</h1>
 
     <div class="container">
-      <img class="header__logo" src="./img/logo.svg" alt="Логотип компании Теплый пол">
+      <img class="header__logo" src="./img/logo.svg" width="162" height="39" alt="Логотип компании Теплый пол">
 
       <button class="header__button button">Заказать</button>
     </div>
@@ -39,9 +43,27 @@
         <!-- /.hero__content -->
 
         <div class="hero__slider-block">
-          <div class="filling hero__slider">
-            <div class="filling hero__slider-wrapper">
-              <div class="filling hero__slide" style="background-image: url('./img/hero-slider/hero-slider-01.jpg');">
+          <div class="hero__slider swiper">
+            <div class="hero__slider-wrapper swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="hero__slide-img" style="background-image: url('./img/hero-slider/hero-slider-01.jpg');">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="hero__slide-img" style="background-image: url('./img/hero-slider/hero-slider-02.jpg');">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="hero__slide-img" style="background-image: url('./img/hero-slider/hero-slider-03.jpg');">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="hero__slide-img" style="background-image: url('./img/hero-slider/hero-slider-04.jpg');">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="hero__slide-img" style="background-image: url('./img/hero-slider/hero-slider-05.jpg');">
+                </div>
               </div>
             </div>
 
@@ -78,12 +100,12 @@
 
           <form class="calc__form">
             <fieldset class="calc__fieldset calc__fieldset_size">
-              <label class="calc__input-label_size">
+              <label class="calc__input-label calc__input-label_size">
                 <span class="calc__label">Ширина помещения, м</span>
                 <input class="calc__input" type="number" name="width" value="5" required>
               </label>
 
-              <label class="calc__input-label_size">
+              <label class="calc__input-label calc__input-label_size">
                 <span class="calc__label">Длина помещения, м</span>
                 <input class="calc__input" type="number" name="length" value="7" required>
               </label>
@@ -92,17 +114,17 @@
             <fieldset class="calc__fieldset calc__fieldset_tariff">
               <legend class="calc__label calc__label_legend">Тариф</legend>
 
-              <label class="calc__input-label_tariff">
+              <label class="calc__input-label calc__input-label_tariff">
                 <input class="calc__radio" type="radio" name="tariff" value="economy">
                 <span>Эконом</span>
               </label>
 
-              <label class="calc__input-label_tariff">
+              <label class="calc__input-label calc__input-label_tariff">
                 <input class="calc__radio" type="radio" name="tariff" value="comfort" checked>
                 <span>Комфорт</span>
               </label>
 
-              <label class="calc__input-label_tariff">
+              <label class="calc__input-label calc__input-label_tariff">
                 <input class="calc__radio" type="radio" name="tariff" value="premium">
                 <span>Премиум</span>
               </label>
@@ -131,8 +153,8 @@
   <!-- /main -->
 
   <footer class="footer">
-    <div class="container">
-      <img class="footer__logo" src="./img/logo.svg" alt="Логотип компании Теплый пол">
+    <div class="container footer__container">
+      <img class="footer__logo" src="./img/logo.svg" width="162" height="39" alt="Логотип компании Теплый пол">
 
       <ul class="footer__socials socials">
         <li class="socials__item">

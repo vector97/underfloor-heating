@@ -1,3 +1,10 @@
+:root {
+  --width-slide: 590px;
+  --width-block: calc(50% - 5px);
+  --gap: 10px;
+  --padding: 50px;
+}
+
 /* указать шрифт под проект font-family */
 $default-font: 'Inter', sans-serif;
 
@@ -28,10 +35,31 @@ $disabled-color: #e0e0e0;
 то для max-width прибавляем паддинги 30px*2,
 в итоге 1240px
 Чтобы контент не прижимался к краям экрана */
-$content-width: 1250px;
+$content-width: 1190px;
 
 /* указать брейкпоинты по макету */
 $breakpoint_xxl: 1440px;
-$breakpoint_xl: 1024px;
-$breakpoint_md: 768px;
-$breakpoint_sm: 320px;
+$breakpoint_xl: 1240px;
+$breakpoint_md: 920px;
+$breakpoint_sm: 560px;
+
+@media (max-width: $breakpoint_xl) {
+  :root {
+    --width-slide: 440px;
+    --padding: 30px;
+  }
+}
+
+@media (max-width: $breakpoint_md) {
+  :root {
+    --width-slide: 311px;
+    --padding: 24px;
+  }
+}
+
+@media (max-width: $breakpoint_sm) {
+  :root {
+    --padding: 20px;
+    --gap: 4px;
+  }
+}

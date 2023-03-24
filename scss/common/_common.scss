@@ -88,7 +88,6 @@ iframe {
 
 .container {
   max-width: $content-width;
-  padding: 0 30px;
   margin: 0 auto;
 }
 
@@ -119,13 +118,9 @@ iframe {
   padding-bottom: 80px;
 }
 
-.filling {
-  width: 100%;
-  height: 100%;
-}
-
 .gray-block {
-  padding: 50px;
+  min-height: 530px;
+  padding: var(--padding);
 
   background-color: $gray-bg-color;
   border-radius: 12px;
@@ -138,4 +133,67 @@ iframe {
   font-weight: 500;
   line-height: 1.3;
   text-transform: uppercase;
+}
+
+@media (max-width: $breakpoint_xl) {
+  .container {
+    max-width: 890px;
+  }
+
+  .section-offset {
+    padding-bottom: 60px;
+  }
+
+  .gray-block {
+    min-height: 396px;
+  }
+
+  .section-title {
+    margin-bottom: 24px;
+
+    font-size: 34px;
+  }
+}
+
+@media (max-width: $breakpoint_md) {
+  .container {
+    max-width: 630px;
+    padding: 0 30px;
+  }
+
+  .button {
+    padding: 10px 24px;
+
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .gray-block {
+    min-height: 280px;
+  }
+
+  .section-title {
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: $breakpoint_sm) {
+  .container {
+    padding: 0 6px;
+  }
+
+  .gray-block {
+    min-height: 232px;
+  }
+
+  .section-title {
+    margin-bottom: 16px;
+
+    font-size: 24px;
+  }
+
+  .button {
+    font-size: 12px;
+    line-height: 15px;
+  }
 }
