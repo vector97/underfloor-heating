@@ -31,7 +31,7 @@
     <div class="container">
       <img class="header__logo" src="./img/logo.svg" width="162" height="39" alt="Логотип компании Теплый пол">
 
-      <button class="header__button button">Заказать</button>
+      <button class="header__button button button_order">Заказать</button>
     </div>
   </header>
   <!-- /.header -->
@@ -106,12 +106,12 @@
             <fieldset class="calc__fieldset calc__fieldset_size">
               <label class="calc__input-label calc__input-label_size">
                 <span class="calc__label">Ширина помещения, м</span>
-                <input class="calc__input" type="number" name="width" value="5" required>
+                <input class="calc__input" type="number" name="width" placeholder="5" required>
               </label>
 
               <label class="calc__input-label calc__input-label_size">
                 <span class="calc__label">Длина помещения, м</span>
-                <input class="calc__input" type="number" name="length" value="7" required>
+                <input class="calc__input" type="number" name="length" placeholder="7" required>
               </label>
             </fieldset>
 
@@ -134,7 +134,7 @@
               </label>
             </fieldset>
 
-            <button class="button calc__submit" type="submit">Рассчитать</button>
+            <button class="button calc__submit js-submit" type="submit" disabled>Рассчитать</button>
           </form>
           <!-- /.calc__form -->
         </div>
