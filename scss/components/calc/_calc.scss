@@ -163,7 +163,7 @@
   // .calc__result-wrapper
 
   &__result-wrapper {
-    display: grid;
+    display: none;
     grid-template-columns: repeat(2, auto);
     gap: 16px 10px;
     align-items: end;

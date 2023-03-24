@@ -1,24 +1,9 @@
-new Swiper('.hero__slider', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: true,
-  slidesPerView: 2,
-  spaceBetween: 10,
-  // autoplay: {
-  //   delay: 3000,
-  // },
+import calc from './modules/calc.js';
+import slider from './modules/slider.js';
 
-  // Navigation arrows
-  navigation: {
-    nextEl: '.hero__slider-btn_next',
-    prevEl: '.hero__slider-btn_prev',
-  },
-  breakpoints: {
-    320: {
-      slidesPerView: 1,
-    },
-    560: {
-      spaceBetween: 8,
-    },
-  },
-});
+const init = () => {
+  slider();
+  calc();
+};
+
+init();

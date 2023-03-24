@@ -6,15 +6,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- swiperjs -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
+  <!-- предзагрузка шрифтов -->
+  <link rel="preload" href="./fonts/inter/inter-v12-cyrillic_latin-regular.woff2" as="font" crossorigin>
+  <link rel="preload" href="./fonts/inter/inter-v12-cyrillic_latin-500.woff2" as="font" crossorigin>
 
   <!-- Подключение главного файла со стилями -->
   <link rel="stylesheet" href="./css/index.css">
 
+  <!-- swiperjs -->
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+  <script src="./js/swiper-bundle.min.js" defer></script>
+
   <!-- Подключение главного файла со скриптами -->
-  <script src="./js/index.js" defer></script>
+  <script src="./js/index.js" type="module"></script>
 
   <link rel="icon" href="favicon.svg">
 </head>
@@ -98,7 +102,7 @@
         <div class="calc__content gray-block">
           <h2 class="section-title calc__title">Рассчитайте стоимость</h2>
 
-          <form class="calc__form">
+          <form class="calc__form js-calc-form">
             <fieldset class="calc__fieldset calc__fieldset_size">
               <label class="calc__input-label calc__input-label_size">
                 <span class="calc__label">Ширина помещения, м</span>
@@ -139,10 +143,10 @@
         <div class="calc__total">
           <dl class="calc__result-wrapper">
             <dt class="calc__label calc__label_total">Площадь</dt>
-            <dd class="calc__result-value">35 кв м</dd>
+            <dd class="calc__result-value js-square">35 кв м</dd>
 
             <dt class="calc__label calc__label_total">Примерная стоимость</dt>
-            <dd class="calc__result-value">42590 руб</dd>
+            <dd class="calc__result-value js-total-price">42590 руб</dd>
           </dl>
         </div>
         <!-- /.calc__total -->

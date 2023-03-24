@@ -644,6 +644,7 @@ iframe {
 
 @media (max-width: 1240px) {
   .advantages__title {
+    max-width: 330px;
     padding-left: 30px; }
   .advantages__item {
     font-size: 20px; } }
@@ -651,6 +652,8 @@ iframe {
   .advantages__container {
     flex-direction: column;
     gap: 24px; }
+  .advantages__title {
+    max-width: 440px; }
   .advantages__list {
     padding-left: 30px; }
   .advantages__item {
@@ -747,7 +750,7 @@ iframe {
   border-radius: 12px;
   overflow: hidden; }
 .calc__result-wrapper {
-  display: grid;
+  display: none;
   grid-template-columns: repeat(2, auto);
   gap: 16px 10px;
   align-items: end;
