@@ -4,6 +4,8 @@ const calc = () => {
   const calcTotalPrice = document.querySelector('.js-total-price');
   const calcResultWrapper = document.querySelector('.calc__result-wrapper');
   const calcButton = document.querySelector('.js-submit');
+  const calcOrder = document.querySelector('.calc__order');
+
   const tariff = {
     economy: 550,
     comfort: 1400,
@@ -22,7 +24,8 @@ const calc = () => {
       const square = calcForm.width.value * calcForm.length.value;
       const price = square * tariff[calcForm.tariff.value];
 
-      calcResultWrapper.style.display = 'grid';
+      calcResultWrapper.classList.add('calc__result-wrapper_show');
+      calcOrder.classList.add('calc__order_show');
 
       calcSquare.textContent = `${square} кв м`;
       calcTotalPrice.textContent = `${price} руб`;

@@ -150,6 +150,14 @@
     }
   }
 
+  &__order {
+    display: none;
+
+    &_show {
+      display: inline-block;
+    }
+  }
+
   // .calc__total
 
   &__total {
@@ -179,6 +187,10 @@
 
     background-color: $default-background;
     border-radius: 8px;
+
+    &_show {
+      display: grid;
+    }
   }
 
   // .calc__result-value

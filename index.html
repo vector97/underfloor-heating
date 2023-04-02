@@ -10,12 +10,14 @@
   <link rel="preload" href="./fonts/inter/inter-v12-cyrillic_latin-regular.woff2" as="font" crossorigin>
   <link rel="preload" href="./fonts/inter/inter-v12-cyrillic_latin-500.woff2" as="font" crossorigin>
 
-  <!-- Подключение главного файла со стилями -->
-  <link rel="stylesheet" href="./css/index.css">
-
-  <!-- swiperjs -->
+  <!-- libs -->
   <link rel="stylesheet" href="./css/swiper-bundle.min.css">
   <script src="./js/swiper-bundle.min.js" defer></script>
+  <script src="./js/just-validate.production.min.js" defer></script>
+  <script src="./js/inputmask.min.js" defer></script>
+
+  <!-- Подключение главного файла со стилями -->
+  <link rel="stylesheet" href="./css/index.css">
 
   <!-- Подключение главного файла со скриптами -->
   <script src="./js/index.js" type="module"></script>
@@ -135,6 +137,7 @@
             </fieldset>
 
             <button class="button calc__submit js-submit" type="submit" disabled>Рассчитать</button>
+            <button class="calc__order button button_order js-order">Заказать</button>
           </form>
           <!-- /.calc__form -->
         </div>

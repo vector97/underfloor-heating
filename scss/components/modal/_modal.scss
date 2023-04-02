@@ -104,6 +104,14 @@
 
     border: 1px solid #e4e4e4;
     border-radius: 12px;
+
+    &-error {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      font-size: 12px;
+    }
   }
 
   // .modal__close

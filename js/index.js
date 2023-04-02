@@ -1,5 +1,5 @@
 import calc from './modules/calc.js';
-import modalController from './modules/modal.js';
+import modalController from './modules/controls.js';
 import slider from './modules/slider.js';
 
 const init = () => {

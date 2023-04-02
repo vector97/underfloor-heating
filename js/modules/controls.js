@@ -1,3 +1,5 @@
+
+
 const scrollController = {
   scrollPosition: 0,
   disabledScroll() {
@@ -19,7 +21,6 @@ const scrollController = {
     document.documentElement.style.scrollBehavior = '';
   },
 };
-
 
 const modalController = ({ modal, btnOpen, btnClose, time = 300 }) => {
   const buttonElems = document.querySelectorAll(btnOpen);
@@ -63,6 +64,70 @@ const modalController = ({ modal, btnOpen, btnClose, time = 300 }) => {
   });
 
   modalElem.addEventListener('click', closeModal);
+
+  // маска
+  const phone = document.getElementById('phone');
+  const imPhone = new Inputmask('+7 (999) 999-99-99');
+  imPhone.mask(phone);
+
+  // валидация
+  const validator = new JustValidate('.modal__form', {
+    errorLabelCssClass: 'modal__input-error',
+    errorLabelStyle: {
+      color: '#ffc700',
+    },
+  });
+
+  validator.addField('#name', [
+    {
+      rule: 'required',
+      errorMessage: 'Введите имя',
+    },
+    {
+      rule: 'minLength',
+      value: 3,
+      errorMessage: 'Не короче 3 символов',
+    },
+    {
+      rule: 'maxLength',
+      value: 30,
+      errorMessage: 'Не более 30 символов',
+    },
+  ]);
+
+  validator.addField('#phone', [
+    {
+      rule: 'required',
+      errorMessage: 'Введите номер телефона',
+    },
+    {
+      validator: value => {
+        const number = phone.inputmask.unmaskedvalue();
+        return number.length === 10;
+      },
+      errorMessage: 'Введите корректный номер',
+    },
+  ]);
+
+  validator.onSuccess(e => {
+    const form = e.currentTarget;
+
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+      method: 'POST',
+      body: JSON.stringify({
+        name: form.name.value,
+        phone: form.phone.value,
+      }),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        form.reset();
+        alert(`Спасибо, мы с вами свяжемся! Ваша заявка под номером ${data.id}`);
+      });
+  });
 };
 
 export default modalController;

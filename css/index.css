@@ -760,6 +760,10 @@ iframe {
     opacity: 0; }
   .calc__radio:checked::after {
     opacity: 1; }
+.calc__order {
+  display: none; }
+  .calc__order_show {
+    display: inline-block; }
 .calc__total {
   display: flex;
   align-items: flex-end;
@@ -779,6 +783,8 @@ iframe {
   padding: 24px;
   background-color: #ffffff;
   border-radius: 8px; }
+  .calc__result-wrapper_show {
+    display: grid; }
 .calc__result-value {
   justify-self: end;
   margin: 0; }
@@ -817,7 +823,7 @@ iframe {
     .calc__input-label_tariff:not(:last-child) {
       margin-bottom: 8px; }
   .calc__total {
-    min-height: auto; }
+    min-height: 128px; }
   .calc__result-wrapper {
     row-gap: 9px;
     min-width: auto;
@@ -945,6 +951,11 @@ iframe {
     padding: 0 25px;
     border: 1px solid #e4e4e4;
     border-radius: 12px; }
+    .modal__input-error {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      font-size: 12px; }
   .modal__close {
     position: absolute;
     top: 10px;
