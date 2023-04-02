@@ -965,4 +965,36 @@ iframe {
     background-color: transparent;
     border-color: transparent; }
 
+@media (max-width: 920px) {
+  .modal__main {
+    max-width: 632px; }
+  .modal__container::after {
+    flex-basis: 192px;
+    background-image: url("../img/modal-bg-tablet.jpg"); }
+  .modal__content {
+    padding: 24px; }
+  .modal__title {
+    margin-bottom: 16px;
+    font-size: 24px; }
+  .modal__subtitle {
+    max-width: 272px;
+    margin-bottom: 24px;
+    font-size: 14px; }
+  .modal__input {
+    height: 36px; }
+    .modal__input-error {
+      font-size: 10px; } }
+@media (max-width: 560px) {
+  .modal__main {
+    max-width: 308px; }
+  .modal__container {
+    flex-direction: column; }
+    .modal__container::after {
+      flex-basis: 214px;
+      background-image: url("../img/modal-bg-mobile.jpg"); }
+  .modal__content {
+    padding: 40px 20px 20px; }
+  .modal__fieldset {
+    flex-direction: column; } }
+
 /*# sourceMappingURL=index.css.map */
